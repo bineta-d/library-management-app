@@ -18,7 +18,7 @@ const AppContextProvider = ({children}) => {
     const addToFavorites = (book)=>{
         const oldFavorites = [...favorites];
 
-        const newFavorites = [oldFavorites.concat(book)];
+        const newFavorites = oldFavorites.concat(book);
 
         setFavorites(newFavorites);
 
@@ -27,13 +27,13 @@ const AppContextProvider = ({children}) => {
     const removeFromFavorites = (id)=>{
         const oldFavorites =[...favorites];
         // filters current favs list by checking if a books id matches the entered, if so removes
-        const newFavorites = [oldFavorites.filter((book)=> book.id !== id)];
+        const newFavorites = oldFavorites.filter((book)=> book.id !== id);
         
         //re-render favorites list
         setFavorites(newFavorites);
     }
     return (
-        <AppContext.Provider value = {{favorites, setFavorites, addToFavorites, removeFromFavorites}}
+        <AppContext.Provider value = {{favorites, addToFavorites, removeFromFavorites}}
         > 
         {children}
         </AppContext.Provider>

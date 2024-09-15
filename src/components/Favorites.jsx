@@ -12,7 +12,7 @@ const Favorites =() =>{
     return (
         <div className='favorites'>
             <h2>Favorites</h2>
-            {/* ternary op for if there is minimum one book added to favs */}
+            {/* ternary op for if there is minimum one book added to favs
             {favorites.length > 0 ? (
         <ul>
           {favorites.map((book, index) => (
@@ -25,7 +25,7 @@ const Favorites =() =>{
         //  if no books, do this
       ) : (
         <p>No favorite books yet!</p>
-      )}
+      )} */}
              </div>
 
     );

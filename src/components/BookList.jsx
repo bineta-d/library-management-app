@@ -7,10 +7,15 @@ import { useAppContext } from './context/appContext';
 const Booklist = ()=> {
     const [books, setBooks] = useState([])
 //  destructure for the to used functions
-    const {favorites, addToFavorites,} = useAppContext(); 
+    const {favorites, addToFavorites,removeFromFavorites} = useAppContext(); 
 
     console.log('favorites are', favorites);
 
+    const favoritesChecker = (id)=>{
+        // checks if at least one element in array meets conditions
+        const boolean = favorites.some((book)=> book.id === id);
+        return boolean;
+    }
     useEffect(()=>{
         axios
         .get(API_URL)
@@ -38,7 +43,16 @@ const Booklist = ()=> {
                         <h2>{book.authors}</h2>
                     </div>
                     <div className="book-item button">
-                        <button onClick={()=> addToFavorites(book)}>Add to Favorites</button>
+                        {/* toggles button text and logic based on if book in favs or not */}
+                        {favoritesChecker(book.id) ? ( 
+                        <button onClick={()=> removeFromFavorites(book.id)}>
+                            Remove From Favorites
+                        </button>) :(
+                         <button onClick={()=> addToFavorites(book)}>
+                            Add to Favorites
+                         </button> 
+                         )}
+                       
                     </div>
 
                     {/* <div className="book-item description">
