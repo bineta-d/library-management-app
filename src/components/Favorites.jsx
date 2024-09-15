@@ -19,7 +19,7 @@ const Favorites =() =>{
                 Back to Library</button></Link>
             </div>
             
-            <h1 className='fav-title'>Favorites</h1>
+            <h1 className='title'>Favorites</h1>
             {/* ternary op for if there is minimum one book added to favs */}
             {favorites.length > 0 ? (
                 <div className='fav-list'>

@@ -3,13 +3,14 @@ import '../App';
 import {API_URL} from '../api' ;
 import axios from 'axios'
 import { useAppContext } from './context/appContext';
+import {Navigate, useNavigate} from 'react-router-dom';
  
 const Booklist = ()=> {
     const [books, setBooks] = useState([])
 //  destructure for the to used functions
     const {favorites, addToFavorites,removeFromFavorites} = useAppContext(); 
 
-    console.log('favorites are', favorites);
+    const navigate = useNavigate();
 
     const favoritesChecker = (id)=>{
         // checks if at least one element in array meets conditions
@@ -37,8 +38,12 @@ const Booklist = ()=> {
                     </div>
                     
                     <div className="book-item image">
-                        <img src={book.image_url} alt={book.title} />
+                      <img src={book.image_url} 
+                      alt="#"  
+                      onClick={()=>navigate('books/${book.id}')}
+                      />
                     </div>
+
                     <div className="book-item authors">
                         <h2>{book.authors}</h2>
                     </div>
