@@ -21,19 +21,35 @@ const Booklist = ()=> {
     return <div className='book-list'>
         {/* goes through list and displays each book */}
         {books.map((book)=>(
-            <div key={ book.id }>
-                <div> <h2>{book.title}</h2></div>
-                <div> <img src={book.image_url}  alt=""/></div>
-                <div><button>Add to Favorites</button></div>
-                <div> <h2>{book.authors}</h2></div>
-                <div><p>{book.description}</p></div>
-                <div><p>{book.genres}</p></div>
-                <div><p>{book.rating}</p></div>
-                <div>
-                    <label for="pageCount">Page Count:</label>
-                    <p id="pageCount">{book.num_pages}</p>
+            <div key={ book.id} className="book">
+                <div className="book-item title">
+                        <h2>{book.title}</h2>
+                    </div>
+                    
+                    <div className="book-item image">
+                        <img src={book.image_url} alt={book.title} />
+                    </div>
+                    <div className="book-item authors">
+                        <h2>{book.authors}</h2>
+                    </div>
+                    <div className="book-item button">
+                        <button >Add to Favorites</button>
                     </div>
 
+                    {/* <div className="book-item description">
+                        <p>{book.description}</p>
+                    </div> */}
+                    
+                    <div className="book-item genres">
+                        <p> Genres: {book.genres}</p>
+                    </div>
+                    <div className="book-item rating">
+                        <p><strong>Rating: {book.rating}</strong></p>
+                    </div>
+                    <div className="book-item page-count">
+                        <p>Page Count: {book.num_pages}</p>
+                    </div>
+                    
 
 
 
