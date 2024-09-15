@@ -40,7 +40,7 @@ const Booklist = ()=> {
                     <div className="book-item image">
                       <img src={book.image_url} 
                       alt="#"  
-                      onClick={()=>navigate('books/${book.id}')}
+                      onClick={() => navigate(`/books/${book.id}`)}
                       />
                     </div>
 

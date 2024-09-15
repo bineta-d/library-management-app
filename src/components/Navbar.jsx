@@ -3,7 +3,7 @@ import '../App';
 import {Link} from 'react-router-dom';
 
 const Navbar = ( ) =>{
-    // console.log('Navbar rendering');
+    // console.log('Navsbar rendering');
     return (
         <div className='navbar'>
             <div>

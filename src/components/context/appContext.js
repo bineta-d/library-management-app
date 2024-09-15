@@ -32,6 +32,7 @@ const AppContextProvider = ({children}) => {
         //re-render favorites list
         setFavorites(newFavorites);
     }
+    
     return (
         <AppContext.Provider value = {{favorites, addToFavorites, removeFromFavorites}}
         > 

@@ -185,3 +185,29 @@ min-height: 0vh;
   font-size: 20px;
   min-height: 0vh;
 }
+.detailed-book-intro{
+  
+  padding: 1vh;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 50vh;
+  background-color: yellow;
+}
+.detailed-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  background-color: #f0f0f0;
+  padding: 5vh;
+  max-width: 80vw;
+ align-items: center;
+ 
+}
+
+.detailed-book img{
+  border: none;
+  width: fit-content;
+ 
+  
+}
