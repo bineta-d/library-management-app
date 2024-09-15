@@ -6,6 +6,7 @@
 body{
   background-color:#ebd5d5 ;
   font-family: 'Abel', sans-serif;
+  
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
@@ -210,7 +211,7 @@ min-height: 0vh;
   justify-content:center;
   background-color: #f0f0f0;
   padding: 5vh;
-  max-width: 80vw;
+  max-width:80vw;
  align-items: center;
  border-radius: 5%;
  border: solid 5px #685454;
@@ -233,4 +234,17 @@ min-height: 0vh;
 .all-book-info{
   margin: auto 10px;
   word-spacing: 3px;
+  
+}
+
+.all-book-info .item{
+  margin: 10px auto;
+}
+.item .rating{
+  display: flex;
+align-items: flex-end;
+  
+}
+.item .rating svg{ 
+ margin-left: 10px;
 }

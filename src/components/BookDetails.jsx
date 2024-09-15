@@ -49,30 +49,44 @@ const BookDetails = () =>{
             <div className='all-book-info'>
                 <div>
                     {/* Authors */}
-                     <h2>Author (s)</h2>
-                    <p>{book?.authors}</p>
+                     <div className="item">
+                         <h2>Author (s)</h2>
+                                             <p>{book?.authors}</p>
+                     </div>
                     
                     {/* Description */}
-                    <h2>Description</h2>
-                    <p>{book?.description}</p>
+                    <div className="item">
+                        <h2>Description</h2>
+                        <p>{book?.description}</p>
+                    </div>
 
                    
                     {/* Page Count */}
-                    <h3>Page Count: </h3>
-                    <p>{book?.num_pages}</p>
+                    <div className="item">
+                        <h3>Page Count: </h3>
+                        <p>{book?.num_pages}</p>
+                    </div>
 
                     {/* Genres */}
-                    <h3>Genres</h3>
-                    <p>{book?.genres}</p>
+                    <div className="item">
+                        <h3>Genres</h3>
+                        <p>{book?.genres}</p>
+                    </div>
                     
                     {/* Quote */}
-                    <h3>Notable Quote</h3>
-                    <p>{book?.Quote1}</p>
+                    <div className="item">
+                        <h3>Notable Quote</h3>
+                        <p>{book?.Quote1}</p>
+                    </div>
 
 
                     {/* Rating */}
-                    <h3>Rating</h3>
-                    <p>{book?.rating}</p>
+                    <div className="item">
+                        <h3 class="rating">Rating 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20.088" height="20.087"><path d="M10.044 20.087A10.044 10.044 0 1 0 0 10.043a10.044 10.044 0 0 0 10.044 10.044zM8.534 8.193l1.4-4.313 1.4 4.313h4.533L12.2 10.858l1.4 4.312-3.666-2.665-3.666 2.665 1.4-4.312L4 8.193z"/></svg>
+                        </h3>
+                        <p>{book?.rating}</p>
+                    </div>
 
 
 
