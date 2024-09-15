@@ -2,9 +2,14 @@ import React, {useState, useEffect} from 'react';
 import '../App';
 import {API_URL} from '../api' ;
 import axios from 'axios'
+import { useAppContext } from './context/appContext';
  
 const Booklist = ()=> {
     const [books, setBooks] = useState([])
+//  destructure for the to used functions
+    const {favorites, addToFavorites,} = useAppContext(); 
+
+    console.log('favorites are', favorites);
 
     useEffect(()=>{
         axios
@@ -33,7 +38,7 @@ const Booklist = ()=> {
                         <h2>{book.authors}</h2>
                     </div>
                     <div className="book-item button">
-                        <button >Add to Favorites</button>
+                        <button onClick={()=> addToFavorites(book)}>Add to Favorites</button>
                     </div>
 
                     {/* <div className="book-item description">
