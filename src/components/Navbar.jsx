@@ -7,10 +7,10 @@ const Navbar = ( ) =>{
     return (
         <div className='navbar'>
             <div>
-                <h1>Your Library</h1>
+            <Link to="/"> <h1>Your Library</h1></Link>
             </div>
             <div>
-                <Link to="/favorites"><h3>Your Favorites</h3></Link>
+                <Link to="/favorites"><h1>Your Favorites</h1></Link>
             </div>
 
         </div>

@@ -13,7 +13,7 @@ const BookDetails = () =>{
     const[book, setBook] = useState({});
 
     useEffect(()=>{
-        // 
+        // dont forget to use slanted quote
         axios.get(`${BOOK_DETAILS_URL}/${id}`)
         .then(res=> {
             console.log('Book data:', res.data);  // Check the fetched data
@@ -37,37 +37,40 @@ const BookDetails = () =>{
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/></svg>
                 Back to Library</button></Link>
         </div> 
-            <h1 className='title'>Book Details</h1>
+            <h1 className='title'>Details</h1>
 
         <div className='detailed-container'>
             {/* within container is all info */}
             <div className='detailed-book-intro'> 
-                <h2>Title{book?.title}</h2>
+                <h1>{book?.title}</h1>
                 <img src={book?.image_url} alt="" />
             </div>
 
             <div className='all-book-info'>
                 <div>
-                     <h2>Authors</h2>
+                    {/* Authors */}
+                     <h2>Author (s)</h2>
                     <p>{book?.authors}</p>
                     
+                    {/* Description */}
                     <h2>Description</h2>
                     <p>{book?.description}</p>
 
                    
-
+                    {/* Page Count */}
                     <h3>Page Count: </h3>
                     <p>{book?.num_pages}</p>
 
-
+                    {/* Genres */}
                     <h3>Genres</h3>
                     <p>{book?.genres}</p>
                     
+                    {/* Quote */}
                     <h3>Notable Quote</h3>
                     <p>{book?.Quote1}</p>
 
 
-                    
+                    {/* Rating */}
                     <h3>Rating</h3>
                     <p>{book?.rating}</p>
 
